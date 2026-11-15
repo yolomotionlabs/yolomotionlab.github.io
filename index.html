@@ -1,1 +1,230 @@
-yolomotionlab.github.io
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yo Lo Motion Lab's | Création de Contenu IA & Réseaux Sociaux</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #070d19;
+            --card-bg: rgba(15, 25, 45, 0.7);
+            --cyan: #00f0ff;
+            --magenta: #ff2a85;
+            --gold: #ffaa00;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(0, 240, 255, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(255, 42, 133, 0.12) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 240, 255, 0.08);
+        }
+
+        .logo-wrapper {
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .description {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 540px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 1rem 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .service-card span {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            max-width: 420px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.95rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.25s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--cyan);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(255, 42, 133, 0.25));
+            border: 1px solid rgba(255, 42, 133, 0.5);
+        }
+
+        .btn-primary:hover {
+            border-color: var(--magenta);
+            box-shadow: 0 0 25px rgba(255, 42, 133, 0.35);
+        }
+
+        footer {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 540px) {
+            .container {
+                padding: 2rem 1.25rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <div class="logo-wrapper">
+            <!-- Assure-toi que ton image s'appelle exactement logo.jpg (ou logo.png) dans ton dépôt GitHub -->
+            <img src="logo.jpg" alt="Logo Yo Lo Motion Lab's" class="logo-img">
+        </div>
+
+        <h1>YO LO MOTION LAB's</h1>
+        <p class="tagline">Content Creation • AI Innovation • Social Media</p>
+
+        <p class="description">
+            Studio créatif spécialisé dans la production de vidéos, visuels et animations générés par intelligence artificielle pour propulser votre présence sur les réseaux sociaux.
+        </p>
+
+        <div class="services">
+            <div class="service-card">
+                <span>🎬</span>
+                Vidéos & Reels IA
+            </div>
+            <div class="service-card">
+                <span>✨</span>
+                Visuels Sur-Mesure
+            </div>
+            <div class="service-card">
+                <span>🚀</span>
+                Stratégie Sociale
+            </div>
+        </div>
+
+        <div class="links">
+            <!-- Remplace les # par tes vrais liens de chaînes -->
+            <a href="https://www.youtube.com/@TON_COMPTE" target="_blank" rel="noopener" class="btn">
+                ▶ Chaîne YouTube
+            </a>
+            <a href="https://www.tiktok.com/@TON_COMPTE" target="_blank" rel="noopener" class="btn">
+                ♪ TikTok
+            </a>
+            <a href="https://www.instagram.com/TON_COMPTE" target="_blank" rel="noopener" class="btn">
+                ◈ Instagram
+            </a>
+            <a href="mailto:yolomotionlabs@gmail.com" class="btn btn-primary">
+                ✉ Me contacter pour un projet
+            </a>
+        </div>
+
+        <footer>
+            © 2026 Yo Lo Motion Lab's — Tous droits réservés.
+        </footer>
+    </main>
+
+</body>
+</html>
